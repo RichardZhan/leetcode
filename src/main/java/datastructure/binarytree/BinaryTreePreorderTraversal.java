@@ -23,6 +23,11 @@ public class BinaryTreePreorderTraversal {
     }
 
 
+    /**
+     * @Description: 内存消耗 时间复杂度
+     * @Author: Richard
+     * @Date: 2020/5/14 10:53
+     */
     public ArrayList<Integer> preorderTraversal(TreeNode root) {
         ArrayList<Integer> resultList = new ArrayList<>();
         if (root == null){

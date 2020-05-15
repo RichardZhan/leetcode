@@ -1,4 +1,4 @@
-package datastructure;
+package datastructure.binarytree;
 
 import java.math.BigDecimal;
 
