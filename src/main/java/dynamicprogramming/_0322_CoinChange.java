@@ -26,7 +26,7 @@ import java.util.Arrays;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  * @date 2020/5/22 11:27
  */
-public class CoinChange {
+public class _0322_CoinChange {
 
     /**
      * @Description: 动态规划 自下而上
@@ -89,7 +89,7 @@ public class CoinChange {
 
 
     public static void main(String[] args) {
-        CoinChange instance = new CoinChange();
+        _0322_CoinChange instance = new _0322_CoinChange();
 
         int[] coins = new int[]{1,2,5};
         int amount = 11;

@@ -36,7 +36,7 @@ import java.util.*;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  * @date 2020/5/22 16:13
  */
-public class CombinationSum {
+public class _0039_combination_sum {
 
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> result = new ArrayList<>();
@@ -125,7 +125,7 @@ public class CombinationSum {
 
 
     public static void main(String[] args) {
-        CombinationSum instance = new CombinationSum();
+        _0039_combination_sum instance = new _0039_combination_sum();
         int[] candidates = new int[]{1,2,5};
         int target = 11;
         List<List<Integer>> result = instance.combinationSum(candidates,target);

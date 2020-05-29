@@ -7,7 +7,7 @@ package datastructure;
  * 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987
  * @date 2020/5/15 11:12
  */
-public class Fibonacci {
+public class _0509_Fibonacci {
 
 
     /**
@@ -132,24 +132,24 @@ public class Fibonacci {
         int n = 10;
 
         //通项公式
-        Fibonacci fibonacci = new Fibonacci();
-        int result = fibonacci.fibonacci(n);
+        _0509_Fibonacci instance = new _0509_Fibonacci();
+        int result = instance.fibonacci(n);
         System.out.println(result);
 
         //java快捷版
-        result = fibonacci.fibonacciFast(n);
+        result = instance.fibonacciFast(n);
         System.out.println(result);
 
         //带备忘录的递归解法
-        result = fibonacci.fibonacciMemoizeDownUp(n);
+        result = instance.fibonacciMemoizeDownUp(n);
         System.out.println(result);
 
         //记忆化自顶向下
-        result = fibonacci.fibonacciMemoizeUpDown(n);
+        result = instance.fibonacciMemoizeUpDown(n);
         System.out.println(result);
 
         //自顶向下迭代
-        result = fibonacci.fibonacciDownUp2(n);
+        result = instance.fibonacciDownUp2(n);
         System.out.println(result);
 
         //矩阵求幂
