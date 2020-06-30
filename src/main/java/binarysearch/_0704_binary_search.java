@@ -222,14 +222,14 @@ public class _0704_binary_search {
 
 
         System.out.println("----------------");
-        //左侧边界二分搜索 区间[l,f)
+        //右侧边界二分搜索 区间[l,f)
         nums = new int[]{1,2,2,3,4};
         target  = 2;
         result = instance.right_bound(nums,target);
         System.out.println(result);
 
         System.out.println("----------------");
-        //左侧边界二分搜索 区间[l,f)
+        //右侧边界二分搜索 区间[l,f)
         nums = new int[]{1,2,2,3,4};
         target  = 0;
         result = instance.right_bound_2(nums,target);
