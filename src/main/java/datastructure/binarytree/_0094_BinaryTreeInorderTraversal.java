@@ -2,6 +2,7 @@ package datastructure.binarytree;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * @author Richard.Zhan
@@ -10,15 +11,6 @@ import java.util.List;
  */
 public class _0094_BinaryTreeInorderTraversal {
 
-    public class TreeNode {
-        int val;
-        TreeNode right;
-        TreeNode left;
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-    }
 
     /**
      * @Description: 递归中序遍历二叉树
@@ -48,17 +40,47 @@ public class _0094_BinaryTreeInorderTraversal {
         }
     }
 
+    // --------------------------------------------------------
+
+    /**
+     * 基于栈的遍历
+     * @param root
+     * @return
+     */
+    public List<Integer> inorderTraversalStack(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+
+        TreeNode curr = root;
+        // 先进后出原则，关注栈内元素
+        while (curr != null || !stack.isEmpty()){
+            while (curr != null) {
+                stack.push(curr);
+                curr = curr.left;
+            }
+            curr = stack.pop();
+            res.add(curr.val);
+            curr = curr.right;
+        }
+
+        return res;
+
+    }
+
 
 
     public static void main(String[] args) {
         _0094_BinaryTreeInorderTraversal instance = new _0094_BinaryTreeInorderTraversal();
-        _0094_BinaryTreeInorderTraversal.TreeNode root = instance.new TreeNode(1);
-        _0094_BinaryTreeInorderTraversal.TreeNode rootRight = instance.new TreeNode(2);
-        _0094_BinaryTreeInorderTraversal.TreeNode rootRightLeft = instance.new TreeNode(3);
+        TreeNode root = new TreeNode(1);
+        TreeNode rootRight = new TreeNode(2);
+        TreeNode rootRightLeft = new TreeNode(3);
         root.right = rootRight;
         root.right.left = rootRightLeft;
         System.out.println(instance.inorderTraversal(root));
 
+
+        // ----------------------------------------------------------------------
+        System.out.println(instance.inorderTraversalStack(root));
 
 
     }
