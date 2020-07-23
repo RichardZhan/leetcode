@@ -1,7 +1,9 @@
 package datastructure.binarytree;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * @author Richard.Zhan
@@ -41,6 +43,36 @@ public class _0145_BinaryTreePostOrderTraversal {
         }
     }
 
+
+    /**
+     * 基于栈的遍历
+     *
+     * @param root
+     * @return
+     */
+    public List<Integer> postOrderTraversalStack(TreeNode root) {
+        LinkedList<Integer> res = new LinkedList<>();
+        LinkedList<TreeNode> stack = new LinkedList<>();
+        if (root == null) {
+            return res;
+        }
+
+        stack.add(root);
+        while (!stack.isEmpty()){
+            TreeNode node = stack.pollLast();
+            // 逆向输出
+            res.addFirst(node.val);
+            if (node.left != null){
+                stack.add(node.left);
+            }
+            if (node.right != null) {
+                stack.add(node.right);
+            }
+        }
+        return res;
+    }
+
+
     public static void main(String[] args) {
         _0145_BinaryTreePostOrderTraversal instance = new _0145_BinaryTreePostOrderTraversal();
 
@@ -54,6 +86,9 @@ public class _0145_BinaryTreePostOrderTraversal {
 
         System.out.println(instance.postOrderTraversalRecursion(root));
 
+        System.out.println("-------------------------------------");
+
+        System.out.println(instance.postOrderTraversalStack(root));
 
 
     }
