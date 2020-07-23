@@ -28,6 +28,7 @@ import java.util.*;
 public class _0046_permutations {
 
 
+
     List<List<Integer>> result = new LinkedList<>();
 
 
@@ -38,6 +39,12 @@ public class _0046_permutations {
         return result;
     }
 
+
+    /**
+     * 回溯
+     * @param nums
+     * @param track
+     */
     private void backtrack(int[] nums, LinkedList<Integer> track) {
 
         //触发结束条件
@@ -129,7 +136,7 @@ public class _0046_permutations {
             System.out.println(list);
         }
 
-        System.out.println("----------------------");
+        System.out.println("----------------------------------------------------");
 
         result = instance.permute(nums);
         for (List<Integer> list : result) {
