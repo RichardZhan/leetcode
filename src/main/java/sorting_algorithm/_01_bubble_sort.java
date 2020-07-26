@@ -11,11 +11,20 @@ import java.util.Arrays;
 public class _01_bubble_sort {
 
 
-
+    /**
+     * 恭喜！发现隐藏任务！那么Arrays.sort使用的是什么排序算法？”
+     * 答：归并、快排、插入都有可能。
+     * “恭喜！要素解锁！请你实现快排和归并排序，并说说他们有什么异同。”
+     * 答：。。。
+     * @param sourceArray
+     * @return
+     * @throws Exception
+     */
     public int[] sort (int[] sourceArray) throws Exception {
         int[] arr = Arrays.copyOf(sourceArray, sourceArray.length);
 
         for (int i = 1; i < arr.length; i++) {
+            // 当一趟序列遍历中元素没有发生交换则说明该序列已经有序
             boolean flag = true;
 
             for (int j = 0; j < arr.length - i; j++) {
@@ -33,6 +42,7 @@ public class _01_bubble_sort {
                 }
             }
 
+            // 集合已全部有序排序
             if (flag) {
                 break;
             }
