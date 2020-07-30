@@ -7,7 +7,17 @@ import java.util.Arrays;
  * @Description: heap sort
  * 堆排序
  *
+ * 堆的概念
  *
+ * 升序排序：
+ *  大堆顶，每个节点的值都大于或等于其子节点的值
+ * 降序排序：
+ *  小堆顶，每个节点的值都小于或等于其子节点的值
+ *
+ *
+ * 步骤：
+ *  1.构建一个堆
+ *  2.把堆首（最大值）和堆尾互换
  * @date 2020/7/30 15:26
  */
 public class _07_heap_sort {
@@ -18,6 +28,7 @@ public class _07_heap_sort {
         int len = arr.length;
 
         buildMaxHeap(arr,len);
+        System.out.println(Arrays.toString(arr));
 
         for (int i = len - 1; i > 0; i--) {
             swap(arr,0,i);
