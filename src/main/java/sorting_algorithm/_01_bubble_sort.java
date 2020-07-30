@@ -23,17 +23,15 @@ public class _01_bubble_sort {
     public int[] sort (int[] sourceArray) throws Exception {
         int[] arr = Arrays.copyOf(sourceArray, sourceArray.length);
 
+        // 区间[1,arr.length]
         for (int i = 1; i < arr.length; i++) {
             // 当一趟序列遍历中元素没有发生交换则说明该序列已经有序
             boolean flag = true;
-
+            // 区间 [0,arr.length - i] i++ 扫描的范围缩小
+            // 每次遍历找出最大值
             for (int j = 0; j < arr.length - i; j++) {
                 if (arr[j] > arr[j + 1]) {
 
-                    // 字符替换 ^ 异或
-//                    arr[j] = arr[j]^arr[j + 1];
-//                    arr[j + 1] = arr[j]^arr[j + 1];
-//                    arr[j] = arr[j]^arr[j + 1];
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;

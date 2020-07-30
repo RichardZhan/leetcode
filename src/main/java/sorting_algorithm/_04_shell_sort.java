@@ -36,6 +36,7 @@ public class _04_shell_sort {
                 }
                 arr[j + gap] = temp;
             }
+            // Math.floor 向下取整
             gap = (int) Math.floor(gap / 3);
             System.out.println("Math.floor(gap / 3):" + gap);
         }
@@ -46,9 +47,10 @@ public class _04_shell_sort {
 
 
     public static void main(String[] args) {
+
         _04_shell_sort instance = new _04_shell_sort();
 
-        int[] sourceArray = new int[] {2,4,5,1,7,3};
+        int[] sourceArray = new int[] {2,4,5,1,7,3,8,9,6};
 
         int[] arr = instance.sort(sourceArray);
 

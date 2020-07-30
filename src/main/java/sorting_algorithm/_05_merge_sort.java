@@ -26,13 +26,8 @@ public class _05_merge_sort {
 
         int middle = (int) Math.floor(arr.length / 2);
 
-
         int[] left = Arrays.copyOfRange(arr,0,middle);
         int[] right = Arrays.copyOfRange(arr,middle,arr.length);
-//        System.out.println("middle: " + middle);
-//        System.out.println(Arrays.toString(left));
-//        System.out.println(Arrays.toString(right));
-
 
         return merge(sort(left),sort(right));
     }
@@ -45,12 +40,10 @@ public class _05_merge_sort {
      */
     private int[] merge(int[] left, int[] right) {
 
-        System.out.println("----------------------");
-        System.out.println(Arrays.toString(left));
-        System.out.println(Arrays.toString(right));
         int[] result = new int[left.length + right.length];
         int i = 0;
 
+        // 循环比较两有序集合的第一位
         while (left.length > 0 && right.length > 0) {
             if (left[0] <= right[0]) {
                 result[i++] = left[0];
