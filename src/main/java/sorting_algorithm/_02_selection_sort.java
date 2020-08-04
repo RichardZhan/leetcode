@@ -16,6 +16,12 @@ import java.util.Arrays;
 public class _02_selection_sort {
 
 
+    /**
+     * 外层循环为已排序集合，内层循环为未排序集合
+     * 内层循环每次找出最小值插入已排序的尾巴
+     * @param sourceArray
+     * @return
+     */
     public int[] sort(int[] sourceArray) {
         int[] arr = Arrays.copyOf(sourceArray,sourceArray.length);
 
@@ -24,6 +30,7 @@ public class _02_selection_sort {
             int min = i;
 
             // 区间 [i + 1, arr.length - 1]
+            // 找出区间内的最小值
             for (int j =  i + 1; j < arr.length; j++) {
                 if (arr[j] < arr[min]){
                     min = j;

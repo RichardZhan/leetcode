@@ -28,7 +28,7 @@ public class _01_bubble_sort {
             // 当一趟序列遍历中元素没有发生交换则说明该序列已经有序
             boolean flag = true;
             // 区间 [0,arr.length - i] i++ 扫描的范围缩小
-            // 每次遍历找出最大值
+            // 每次遍历找出范围内最大值，交换往右排序
             for (int j = 0; j < arr.length - i; j++) {
                 if (arr[j] > arr[j + 1]) {
 

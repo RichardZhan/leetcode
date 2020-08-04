@@ -17,6 +17,11 @@ import java.util.Arrays;
  */
 public class _05_merge_sort {
 
+    /**
+     * 分治法，自下而上迭代，两两比较
+     * @param sourceArray
+     * @return
+     */
     public int[] sort (int[] sourceArray) {
         int[] arr = Arrays.copyOf(sourceArray,sourceArray.length);
 

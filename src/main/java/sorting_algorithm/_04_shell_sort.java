@@ -14,6 +14,11 @@ import java.util.Arrays;
 public class _04_shell_sort {
 
 
+    /**
+     * 递减增量排序，间隔数据集合插入排序
+     * @param sourceArray
+     * @return
+     */
     public int[] sort(int[] sourceArray) {
         int[] arr = Arrays.copyOf(sourceArray,sourceArray.length);
 

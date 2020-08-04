@@ -13,6 +13,11 @@ import java.util.Arrays;
 public class _03_insert_sort {
 
 
+    /**
+     * 在有序集合中找到合适的位置，该位置右侧集合往右移动
+     * @param sourceArray
+     * @return
+     */
     public int[] sort(int[] sourceArray) {
 
         int[] arr = Arrays.copyOf(sourceArray,sourceArray.length);
